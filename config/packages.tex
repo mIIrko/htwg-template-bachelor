@@ -1,0 +1,31 @@
+% HTWG
+\usepackage{graphicx}
+\usepackage{a4}
+\usepackage[ngerman]{babel}			%% Neue deutsche Rechtschreibung
+\usepackage[utf8]{inputenc} 		%% Umlaute
+
+\usepackage[printonlyused]{acronym} %% Abkuerzungsverzeichnis (nur verwendete)
+\usepackage{todonotes} 				%% TODOs moeglich mit \todo{}
+\usepackage{booktabs}				%% Tabellen
+\usepackage{amsmath}				%% Formeln
+\usepackage{subfigure} 				%% Mehrere Bilder nebeneinander
+\usepackage{hyperref} 				%% referenzen innerhalb und außerhalb des Dokumentes
+
+% Eigenes Design
+% TODO loeschen wenn default HTWG Design (was es nicht wirklich gibt) gewuuenscht ist
+\usepackage[bottom=3cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% Code Highlighting
+\usepackage{minted}					%% Minted Paket für Syntax Highlighting		
+\usemintedstyle{pastie}				%% Style Theme für das Highlighting
+\usepackage{listings}				%% Dependency von minted
+
+% Necessary when used the KOMA-Package
+% must stay at the end of the imports
+
+\usepackage{scrhack}			%% scrhack redefines macros of other packages
+
+
+

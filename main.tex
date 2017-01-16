@@ -1,0 +1,49 @@
+\documentclass[
+		11pt,
+		a4paper,
+		toc=listof, 		%% Abbildungs- und Tabellenverzeichnis mit ins Inhaltsverzeichnis
+		bibliography=totoc 	%% Quellenverzeichnis mit ins Inhaltsverzeichnis
+		]{scrreprt}	 		%% KOMA Script
+
+\input{config/packages}		%% package Imports laden
+\input{config/options}		%% Optionen zur Nummerierung etc
+\input{config/variables}	%% gesetzte Variablen laden
+
+
+\begin{document}
+
+\pagenumbering{gobble}		%% Paginierung aus
+
+\include{template/cover}	%% Deckblatt
+\include{template/title}	%% Titelseite
+\include{template/abstract}	%% Abstract
+
+\pagenumbering{Roman}
+\include{template/affidavit}
+
+\tableofcontents
+
+\input{config/acronyms}
+
+\cleardoublepage		%% Paginierung an
+\pagenumbering{arabic}	%% Paginierungs-Stil
+
+
+
+\include{content/chapters/01_einleitung}
+
+\include{content/chapters/02_grundlagen}
+
+\include{content/chapters/03_1_codebeispiel}
+\include{content/chapters/03_2_abbildungen}
+\include{content/chapters/03_3_tabelle}
+
+
+
+\listoffigures
+%% \lstlistoflistings
+\listoftables
+
+\bibliographystyle{apalike}
+\bibliography{citeulike}
+\end{document}
